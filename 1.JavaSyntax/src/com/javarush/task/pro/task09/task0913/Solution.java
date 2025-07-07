@@ -19,6 +19,7 @@ public class Solution {
     }
 
     public static int getIndexFromLastWord(String string, String word) {
+        //напишите тут ваш код
         return string.lastIndexOf(word);
     }
 }
