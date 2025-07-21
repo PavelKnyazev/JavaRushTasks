@@ -7,6 +7,7 @@ import java.util.ArrayList;
 */
 
 public class Solution {
+
     public static ArrayList<String> waitingEmployees = new ArrayList<>();
     public static ArrayList<String> alreadyGotSalaryEmployees = new ArrayList<>();
 
@@ -22,21 +23,26 @@ public class Solution {
 
     public static void main(String[] args) {
         initEmployees();
-        waitingEmployees.forEach(name -> System.out.print(name + " "));
-        System.out.println();
-        paySalary("Нифрод");
-        waitingEmployees.forEach(name -> System.out.print(name + " "));
+        System.out.println(waitingEmployees);
+        paySalary("Гунигерд");
+        System.out.println(waitingEmployees);
     }
 
 
     public static void paySalary(String name) {
+        //напишите тут ваш код
         if (name == null) {
             return;
         }
+
         if (waitingEmployees.contains(name)) {
             alreadyGotSalaryEmployees.add(name);
             int index = waitingEmployees.indexOf(name);
             waitingEmployees.set(index, null);
         }
+
+
+
+
     }
 }
